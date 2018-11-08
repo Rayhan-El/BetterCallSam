@@ -16,6 +16,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".game1_reacttime.ReactTime">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".game1_reacttime.ScorePopUp"
+            android:theme="@style/AppTheme.PopUpTheme" />
     </application>
 
 </manifest>

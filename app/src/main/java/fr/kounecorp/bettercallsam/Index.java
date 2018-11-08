@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import fr.kounecorp.bettercallsam.reflexGame.ReactTime;
 
 public class Index extends AppCompatActivity {
 
@@ -22,7 +21,8 @@ public class Index extends AppCompatActivity {
         this.btnJouer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent ReactTime = new Intent(Index.this, ReactTime.class);
+                Intent ReactTime = new Intent(Index.this,
+                        fr.kounecorp.bettercallsam.game1_reacttime.ReactTime.class);
                 startActivity(ReactTime);
             }
         });
