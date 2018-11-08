@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Better Call Sam</string>
+    <string name="app_name">Reaction Time !</string>
+
+    <string name="btnInit">Appuyez pour jouer</string>
+    <string name="btnRed">Attendez&#8230;</string>
+    <string name="btnGreen">Appuyez !</string>
+    <string name="btnTooSoon">Trop tôt !</string>
+
+    <string name="infoInit">Quand le bouton devient vert, appuyez aussi vite que possible.</string>
+    <string name="infoTooSoon">Appuyez pour réessayer.</string>
+    <string name="infoEnd">Appuyer pour continuer.</string>
+
+    <string name="moy">Moyenne :</string>
+    <string name="essais">Essais :</string>
+
+    <string name="btnJouer">Jouer pour tester tes réflexes !</string>
 </resources>
