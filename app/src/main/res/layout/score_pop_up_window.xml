@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/black"
-        android:text="Bilan"
+        android:text="@string/bilan"
         android:textSize="30sp" />
 
     <LinearLayout
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textColor="@android:color/black"
-            android:text="@string/moy"
+            android:text="@string/moyenneTexte"
             android:textSize="30sp" />
 
         <TextView
@@ -42,17 +42,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
+            android:text="@string/moyenneValeur"
             android:textSize="30sp" />
 
     </LinearLayout>
 
 
     <Button
+        android:id="@+id/btnContinuer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/LayoutMoy"
         android:layout_centerHorizontal="true"
-        android:text="Continuer"
+        android:text="@string/continuer"
         android:textAllCaps="false"
         android:textSize="25sp" />
 

@@ -20,6 +20,8 @@ public class ReactTime extends AppCompatActivity {
     public final static int BLEU  = 0xFF2B87D1;
     public final static int JAUNE = 0xFFFFD700;
 
+    private final int MAXTRIES = 5;
+
     private Button b;
     private TextView triesText;
     private TextView avgText;
@@ -66,11 +68,9 @@ public class ReactTime extends AppCompatActivity {
                 }
                 break;
         }
-        if (this.tries == 5) {
+        if (this.tries == this.MAXTRIES) {
             this.triesText.setTextColor(JAUNE);
-            Intent scorePopUp = new Intent(ReactTime.this,ScorePopUp.class);
-            scorePopUp.putExtra("avg", avg);
-            startActivity(scorePopUp);
+            lunchPopUp();
         }
         this.nbClick++;
     }
@@ -86,15 +86,15 @@ public class ReactTime extends AppCompatActivity {
         this.avg = 0;
         this.tries = 0;
         this.infoText.setText(R.string.infoInit);
-        this.avgText.setText(" " + this.avg + "ms");
-        this.triesText.setText(" " + this.tries + " sur 5");
+        this.avgText.setText(getString(R.string.moyenneValeur, this.avg));
+        this.triesText.setText(getString(R.string.essaisValeur, this.tries, this.MAXTRIES));
     }
 
     private void firstClick() {
         this.canClick = false;
         this.b.setBackgroundColor(ROUGE);
         this.b.setText(R.string.btnRed);
-        this.infoText.setText("");
+        this.infoText.setText(R.string.vide);
     }
 
     private void clickedOnGreen() {
@@ -104,7 +104,7 @@ public class ReactTime extends AppCompatActivity {
         this.updateAvgTries();
 
         this.b.setBackgroundColor(BLEU);
-        this.b.setText(reactionTime +" ms");
+        this.b.setText(getString(R.string.moyenneValeur,this.avg));
         this.infoText.setText(R.string.infoEnd);
     }
 
@@ -120,15 +120,21 @@ public class ReactTime extends AppCompatActivity {
         this.b.setBackgroundColor(VERT);
         this.reactionTime = System.nanoTime();
         this.b.setText(R.string.btnGreen);
-        this.infoText.setText("");
+        this.infoText.setText(R.string.vide);
     }
 
     private void updateAvgTries() {
         this.tries++;
         this.somTime += this.reactionTime;
         this.avg = this.somTime/this.tries;
-        this.triesText.setText(" " + this.tries + " sur 5");
-        this.avgText.setText(" " + this.avg + "ms");
+        this.avgText.setText(getString(R.string.moyenneValeur, this.avg));
+        this.triesText.setText(getString(R.string.essaisValeur, this.tries, this.MAXTRIES));
+    }
+
+    private void lunchPopUp() {
+        Intent scorePopUp = new Intent(ReactTime.this,ScorePopUp.class);
+        scorePopUp.putExtra("avg", avg);
+        startActivity(scorePopUp);
     }
 
     private void countDown() {

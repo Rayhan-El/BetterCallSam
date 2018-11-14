@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Better Call Sam</string>
 
+    <string name="btnJouer">Jouer pour tester tes réflexes !</string>
+
+    <string name="vide"> </string>
+
     <string name="btnInit">Appuyez pour jouer</string>
     <string name="btnRed">Attendez&#8230;</string>
     <string name="btnGreen">Appuyez !</string>
@@ -10,8 +14,13 @@
     <string name="infoTooSoon">Appuyez pour réessayer.</string>
     <string name="infoEnd">Appuyer pour continuer.</string>
 
-    <string name="moy">Moyenne :</string>
-    <string name="essais">Essais :</string>
+    <string name="moyenneTexte">Moyenne :&#160;</string>
+    <string name="moyenneValeur">%1$dms</string>
+    <string name="essaisTexte">Essais :&#160;</string>
+    <string name="essaisValeur">%1$d sur %2$d</string>
 
-    <string name="btnJouer">Jouer pour tester tes réflexes !</string>
+
+    <string name="bilan">Bilan</string>
+    <string name="continuer">Continuer</string>
+
 </resources>
