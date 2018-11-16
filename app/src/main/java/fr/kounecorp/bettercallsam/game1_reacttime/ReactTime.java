@@ -104,7 +104,7 @@ public class ReactTime extends AppCompatActivity {
         this.updateAvgTries();
 
         this.b.setBackgroundColor(BLEU);
-        this.b.setText(getString(R.string.moyenneValeur,this.avg));
+        this.b.setText(getString(R.string.moyenneValeur,this.reactionTime));
         this.infoText.setText(R.string.infoEnd);
     }
 

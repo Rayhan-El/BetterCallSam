@@ -3,9 +3,9 @@ package fr.kounecorp.bettercallsam.game1_reacttime;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import fr.kounecorp.bettercallsam.R;
 
@@ -18,12 +18,6 @@ public class ScorePopUp extends Activity {
         setContentView(R.layout.score_pop_up_window);
         int r = ReactTime.ROUGE;
         int g = ReactTime.VERT;
-
-
-        getWindow().setLayout(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-        );
 
         TextView avgScore = findViewById(R.id.avgScore);
         int avg = getIntent().getIntExtra("avg",0);
@@ -42,6 +36,12 @@ public class ScorePopUp extends Activity {
                 //TODO start activity jeu 2
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Empeche l'utilisateur a faire retour, il est obliger de cliquer sur "Continuer"
+        Toast.makeText(getApplicationContext(), R.string.BackInfo, Toast.LENGTH_SHORT).show();
     }
 
 }
