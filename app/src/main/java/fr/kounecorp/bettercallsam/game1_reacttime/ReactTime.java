@@ -68,7 +68,7 @@ public class ReactTime extends AppCompatActivity {
                 }
                 break;
         }
-        if (this.tries == this.MAXTRIES) {
+        if (this.tries == 1) {
             this.triesText.setTextColor(JAUNE);
             lunchPopUp();
         }

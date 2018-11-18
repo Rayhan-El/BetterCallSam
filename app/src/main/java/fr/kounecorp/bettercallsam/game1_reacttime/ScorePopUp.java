@@ -1,6 +1,7 @@
 package fr.kounecorp.bettercallsam.game1_reacttime;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,8 +9,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import fr.kounecorp.bettercallsam.R;
+import fr.kounecorp.bettercallsam.game2_noname.Game2;
 
 public class ScorePopUp extends Activity {
+
+    private int avg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,7 @@ public class ScorePopUp extends Activity {
         int g = ReactTime.VERT;
 
         TextView avgScore = findViewById(R.id.avgScore);
-        int avg = getIntent().getIntExtra("avg",0);
+        avg = getIntent().getIntExtra("avg",0);
         if (avg >= 450) {
             avgScore.setTextColor(r);
         } else {
@@ -33,7 +37,9 @@ public class ScorePopUp extends Activity {
         continuer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO start activity jeu 2
+                Intent game2 = new Intent(ScorePopUp.this,Game2.class);
+                game2.putExtra("avg", avg);
+                startActivity(game2);
             }
         });
     }
