@@ -46,7 +46,7 @@ public class ScorePopUp extends Activity {
 
     @Override
     public void onBackPressed() {
-        // Empeche l'utilisateur a faire retour, il est obliger de cliquer sur "Continuer"
+        // Empeche l'utilisateur a faire retour, il est obligé de cliquer sur "Continuer"
         Toast.makeText(getApplicationContext(), R.string.BackInfo, Toast.LENGTH_SHORT).show();
     }
 

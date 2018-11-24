@@ -12,10 +12,10 @@
         android:id="@+id/canvasView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnForme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/game2Info" />
+        app:layout_constraintTop_toBottomOf="@+id/game2Info" />
 
     <TextView
         android:id="@+id/game2Info"
@@ -23,5 +23,25 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Appuye sur tout les cercles le plus rapidement possible ! Attention à ne pas faire d'erreur" />
+
+    <Button
+        android:id="@+id/btnForme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="newFormes"
+        android:onClick="newFormes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Clear"
+        android:onClick="clearCanvas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -39,5 +39,5 @@ public abstract class Forme {
 
     public abstract void display(Canvas canvas);
 
-    public abstract void testClick(int fingerX, int fingerY, Canvas canvas);
+    public abstract void testClick(int fingerX, int fingerY);
 }
